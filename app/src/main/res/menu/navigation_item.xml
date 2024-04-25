@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+       <item
+           android:id="@+id/theme"
+           android:title="@string/theme"
+           android:background="?android:attr/selectableItemBackground"
+           android:icon="@drawable/baseline_nightlight_round_24"/>
+
+       <item
+           android:background="?android:attr/selectableItemBackground"
+           android:id="@+id/privacy_policy"
+           android:icon="@drawable/baseline_privacy_tip_24"
+           android:title="@string/privacy_policy"
+           />
+
+       <item
+           android:background="?android:attr/selectableItemBackground"
+           android:id="@+id/about"
+           android:icon="@drawable/about"
+           android:title="@string/about"
+           />
+
+
+</menu>

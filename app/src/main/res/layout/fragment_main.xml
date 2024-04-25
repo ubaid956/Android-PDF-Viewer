@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/_30sdp"
+      >
+       <TextView
+
+           style="@style/TEXT"
+           android:layout_marginTop="@dimen/_5sdp"
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="@dimen/_15sdp"
+           android:layout_marginBottom="@dimen/_5sdp"
+           android:text="@string/all_files"
+
+           android:textSize="@dimen/_18sdp"
+           android:textStyle="bold"
+           tools:ignore="TextSizeCheck" />
+
+
+   </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/recycler_view"
+        android:paddingTop="@dimen/_10sdp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/option_cardView"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        style="@style/CardViewWhiteTheme"
+        >
+        <LinearLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/option_img"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:contentDescription="@string/pdf_name"
+                android:src="@drawable/img"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/option_name"
+                    style="@style/TEXT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pdf_title"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    style="@style/lightText"
+                    android:id="@+id/option_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pdf_path"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/option_share"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:paddingStart="@dimen/_15sdp"
+                style="@style/button_theme"
+                android:textAlignment="viewStart"
+                app:iconPadding="@dimen/_18sdp"
+                android:text="@string/share2"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

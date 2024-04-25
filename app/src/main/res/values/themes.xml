@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PDFViewer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.PDFViewer" parent="Base.Theme.PDFViewer" />
+
+
+    //        Light Theme
+//For app bar
+    <style name="app_bar">
+        <item name="android:color">#DBD8D8</item>
+    </style>
+
+    // recyclerView Background
+    <style name="recycler_view">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    //rv_items
+    <style name="rv_items">
+        <item name="android:color">@color/white</item>
+    </style>
+
+    <style name="drawerStyle">
+        <item name="android:background">@color/white</item>
+    </style>
+
+
+    <style name="Screen">
+        <item name="android:background">@color/white</item>
+    </style>
+
+
+    <style name="TEXT">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="lightText">
+        <item name="android:textColor">@color/transparent</item>
+    </style>
+
+    <style name="card_background">
+        <item name="android:color">@color/white</item>
+
+    </style>
+
+    <style name="CardViewWhiteTheme">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_250sdp</item>
+
+    </style>
+
+
+    <style name="pageCard">
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="editText">
+        <item name="android:textColorHint">@color/dark_color2</item>
+    </style>
+    <style name="button_theme" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+
+        <item name="rippleColor">@color/transparent</item>
+        <item name="android:drawableLeft">@drawable/share_black</item>
+        <item name="android:textColor">@color/transparent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_200sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    style="@style/drawerStyle"
+
+    android:gravity="bottom"
+    android:layout_height="@dimen/_130sdp">
+
+
+    <TextView
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/pdf_viewer2"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        app:dividerColor="@android:color/black"
+        android:layout_height="@dimen/_1sdp"/>
+
+</LinearLayout>

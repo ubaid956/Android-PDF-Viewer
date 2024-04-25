@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pdf_Activity"
+    tools:ignore="ExtraText">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <com.github.barteksc.pdfviewer.PDFView
+                    android:id="@+id/pdfView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                
+
+
+        
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/toplayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/dark_color"
+            android:layout_alignParentTop="true"
+                >
+
+
+                <TextView
+                    android:paddingTop="@dimen/_8sdp"
+                    android:id="@+id/pdf_nameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="@string/name_of_pdf"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="TextSizeCheck" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/page_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+
+
+
+
+        <RelativeLayout
+
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dark_color"
+            android:layout_height="@dimen/_55sdp">
+
+
+                <Button
+                    android:id="@+id/pages"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:drawableTop="@drawable/pages"
+                    android:text="@string/page"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_5sdp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/viewMode"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:contentDescription="@string/view_mode"
+                    android:drawableTop="@drawable/view_mode"
+                    android:text="@string/view_mode1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_5sdp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck,DuplicateSpeakableTextCheck" />
+
+                <Button
+                    android:id="@+id/share"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_220sdp"
+
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:contentDescription="@string/share"
+                    android:drawableTop="@drawable/share"
+                    android:text="@string/share1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_5sdp"
+                    android:textStyle="bold"
+                    app:srcCompat="@drawable/share"
+                    tools:ignore="TextSizeCheck" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            style="@style/pageCard"
+            android:id="@+id/page_cardView"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_centerInParent="true"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+
+                <TextView
+
+                    style="@style/TEXT"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:text="@string/go_to_page"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextNumber"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:autofillHints="none"
+
+                    style="@style/TEXT"
+                    android:ems="10"
+                    android:hint="@string/enter_page_number"
+                    android:inputType="number"
+                    android:minHeight="70dp"
+                   />
+
+                <Button
+
+                    android:id="@+id/button_cancel"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_80sdp"
+                    android:backgroundTint="#E1DFDF"
+                    android:text="@string/cancel"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+                <Button
+                    android:id="@+id/ok_btn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_80sdp"
+                    android:backgroundTint="@color/blue"
+                    android:text="@string/ok"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_mode_card"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:visibility="gone"
+            style="@style/pageCard"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/_200sdp">
+
+                <TextView
+
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/view_mode2"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"/>
+
+                <Button
+                   android:backgroundTint="@color/transparent"
+                    android:id="@+id/horizontal_btn"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:contentDescription="@string/horizontal"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:drawableTop="@drawable/horizontel_white"
+                    />
+
+                <TextView
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_32sdp"
+                    android:layout_marginTop="@dimen/_120sdp"
+                    android:text="@string/horizontal"
+
+                    android:textSize="@dimen/_10sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <Button
+                    android:backgroundTint="@color/transparent"
+                    android:id="@+id/vertical_btn"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:layout_marginStart="@dimen/_200sdp"
+                    android:contentDescription="@string/vertical"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:drawableTop="@drawable/vertical_white"
+                    />
+
+                <TextView
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_215sdp"
+                    android:layout_marginTop="@dimen/_120sdp"
+                    android:text="@string/vertical"
+
+                    android:textSize="@dimen/_10sdp"
+                    tools:ignore="TextSizeCheck" />
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pdf_cardView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        style="@style/recycler_view"
+        android:layout_height="@dimen/_80sdp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp">
+        <RelativeLayout
+            android:id="@+id/pdfRl"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="match_parent"
+           >
+            <ImageView
+                android:background="@color/white"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:id="@+id/pdf_imgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/pdf_image" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/name_layout"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/TEXT"
+                android:layout_height="wrap_content"
+                android:id="@+id/pdf_txtName"
+                android:text="@string/name"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:padding="@dimen/_4sdp"
+                android:height="@dimen/_40sdp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:id="@+id/address"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/border_bg"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@string/pdfText"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"
+                    tools:ignore="TextSizeCheck" />
+
+                <TextView
+                    style="@style/TEXT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text="@string/date"
+
+                    android:id="@+id/date_tv"
+                    android:textSize="@dimen/_10sdp"
+                    tools:ignore="TextSizeCheck,VisualLintBounds" />
+
+                <TextView
+                    style="@style/TEXT"
+                    android:id="@+id/doc_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/size" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_folder_24"
+                    android:contentDescription="@string/folder" />
+
+                <TextView
+                    style="@style/TEXT"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:id="@+id/file_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/option"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo4"
+            android:src="@drawable/baseline_more_vert_24"
+            />
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        android:layout_marginTop="@dimen/_75sdp"
+
+
+        app:dividerColor="@color/transparent"
+/>
+</androidx.cardview.widget.CardView>
